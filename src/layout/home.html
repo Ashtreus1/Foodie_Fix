@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie Fix</title>
+    <link rel="stylesheet" href="/src/styles/home.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">Logo Here</a>
+        <div class="menu-toggle">☰</div>
+        <ul>
+            <li><a href="#recipes">Recipes</a></li>
+            <li><a href="#blogs">Blogs</a></li>
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Welcome to Foodie Fix</h1>
+        <p>Discover delicious recipes, read inspiring blogs, and join exciting food events!</p>
+        <button>Get Started</button>
+    </section>
+
+    
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.navbar ul');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
