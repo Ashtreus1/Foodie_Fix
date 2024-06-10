@@ -1,0 +1,113 @@
+/* Navbar Styles */
+.navbar {
+    height: 5vh;
+    padding: 8px 50px;
+}
+
+.navbar-contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-contents > * {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar .chefhat {
+    width: 45px;
+    font-family: More Sugar;
+}
+
+.navbar .logo {
+    font-family: More Sugar;
+    font-size: large;
+    text-decoration: none;
+    color: black;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.navbar ul li a {
+    margin-right: 50px;
+    color: #380e0e;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s, border-color 0.3s;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.navbar ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #380e0e;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    color: #380e0e;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        display: none;
+        background-color: #fff;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    .navbar ul.active {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .navbar ul li {
+        margin-left: 0;
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+    }
+    .menu-toggle {
+        display: block;
+    }
+
+}

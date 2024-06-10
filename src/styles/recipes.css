@@ -1,0 +1,105 @@
+@font-face {
+    font-family: More Sugar;
+    src: url("../fonts/MoreSugar-Regular.ttf");
+}
+
+@font-face {
+    font-family: Averia;
+    src: url("../fonts/AveriaSerifLibre-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: Averia;
+    background-color: #fffaf0;
+    margin: 0;
+    padding: 0;
+}
+
+.recipes-main-section {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.recipies-title-container {
+    display: flex;
+}
+
+.recipes-card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+}
+/* left */
+.recipes-card-container .left {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.recipe-info {
+    align-items: center;
+    border: solid 1px black;
+    padding: 20px 10px;
+}
+
+.recipe-info > div {
+    display: flex;
+    gap: 4px;
+}
+
+/* right */
+.recipes-card-container .right {
+    max-width: 872px;
+}
+
+.recipe-filter-panel {
+    display: flex;
+    justify-content: end;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.recipe-filter-panel > p {
+    border: 1px black solid;
+    border-radius: 100px;
+    padding: 5px 15px;
+}
+.recipe-card-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-card {
+    border: black solid 1px;
+    width: 248px;
+    height: 248px;
+    padding: 8px 8px;
+}
+
+.recipe-card img {
+    width: 230px;
+    height: 180px;
+    object-fit: cover;
+}
+.recipe-card p {
+    text-align: center;
+}
+
+.recipe-card div {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
