@@ -22,29 +22,31 @@ body {
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /*
   Hero Section styling
 */
 .hero {
-    height: 95vh;
+    min-height: 95vh;
     text-align: left;
     color: #333;
     padding: 0 50px;
-    margin: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-content {
-    /* margin-top: 50px;
-    margin-left: 35px;
-    padding: 20px;
-    border-radius: 10px; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 100px;
+    text-align: center;
 }
 
 .hero-links {
@@ -68,15 +70,13 @@ body {
 .hero p {
     max-width: 700px;
     font-size: 16px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 .hero-button {
     border: black solid 2px;
     color: black;
-    /* background-color: black; */
-    /* color: white; */
     padding: 8px 15px;
     border-radius: 100px;
     text-decoration: none;
@@ -89,49 +89,26 @@ body {
 }
 
 .hero-image img {
-    width: 600px;
-    height: 600px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
     animation: float 5s infinite ease-in-out;
 }
 
 .hero-image {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: -100px;
     padding: 0;
 }
 
-/* .hero-image img {
-    width: 600px;
-    height: 600px;
-    animation: float 5s infinite ease-in-out;
-}
-
-.hero-image-1 {
-    position: absolute;
-    bottom: 0;
-    top: 200px;
-    right: -350px;
-    width: 700px !important;
-    height: 700px !important;
-}
-
-.hero-image-2 {
-    position: absolute;
-    right: 150px;
-    top: 400px;
-    bottom: -80px;
-    bottom: 0;
-} */
 /*
   What's New Recipe Cards Section
 */
 
 .features {
     padding: 50px 20px;
-    margin: 0 20px 0 20px;
+    margin: 0 20px;
     background-color: transparent;
     text-align: center;
 }
@@ -156,6 +133,10 @@ body {
     transition: transform 0.3s;
     padding: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .feature-card:hover {
@@ -163,7 +144,10 @@ body {
 }
 
 .feature-card img {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -233,7 +217,8 @@ body {
 }
 
 .swiper-slide img {
-    width: 100%;
+    width: 50%;
+    height: 50%;
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -344,6 +329,28 @@ body {
 }
 
 @media (max-width: 1024px) {
+
+    .hero {
+        padding: 0 30px;
+    }
+
+    .hero h3 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero-button {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .hero-image img {
+        max-width: 600px;
+    }
+
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -369,6 +376,27 @@ body {
 
     .hero-image {
         display: none;
+    }
+
+    .hero {
+        padding: 0 20px;
+    }
+
+    .hero h3 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero-button {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .hero-image img {
+        max-width: 500px;
     }
 
     .features-grid {
@@ -398,5 +426,28 @@ body {
     .big-card,
     .small-cards {
         width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 0 10px;
+    }
+
+    .hero h3 {
+        font-size: 20px;
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+
+    .hero-button {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+    .hero-image img {
+        max-width: 250px;
     }
 }

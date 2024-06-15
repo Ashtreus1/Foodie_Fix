@@ -1,3 +1,4 @@
+/* General styles */
 @font-face {
     font-family: More Sugar;
     src: url("../fonts/MoreSugar-Regular.ttf");
@@ -23,33 +24,33 @@ body {
 }
 
 .recipes-main-section {
-    height: 95vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 50px;
+    padding: 0 20px;
 }
 
 .recipies-title-container {
-    display: flex;
+    margin: 20px 0;
 }
+
 
 .recipes-card-container {
     display: flex;
-    flex-direction: row;
-    gap: 64px;
-}
-/* left */
-.recipes-card-container .left {
-    display: flex;
     flex-direction: column;
-    margin-top: 80px;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+
+.recipes-card-container .left {
+    margin-top: 40px; 
 }
 
 .recipe-info {
     align-items: center;
     border: solid 1px black;
-    padding: 20px 10px;
+    padding: 20px;
 }
 
 .recipe-info > div {
@@ -57,14 +58,14 @@ body {
     gap: 4px;
 }
 
-/* right */
+
 .recipes-card-container .right {
-    max-width: 872px;
+    max-width: 100%; 
 }
 
 .recipe-filter-panel {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     gap: 16px;
     margin: 24px 0;
 }
@@ -74,32 +75,66 @@ body {
     border-radius: 100px;
     padding: 5px 15px;
 }
+
+
 .recipe-card-display {
     display: flex;
     flex-wrap: wrap;
-    gap: 64px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
 }
 
+
 .recipe-card {
     border: black solid 1px;
-    width: 248px;
-    height: 248px;
-    padding: 8px 8px;
-}
-
-.recipe-card img {
-    width: 230px;
-    height: 180px;
-    object-fit: cover;
-}
-.recipe-card p {
+    width: 100%; 
+    max-width: 300px; /* Limit width on larger screens */
+    padding: 8px;
     text-align: center;
 }
 
-.recipe-card div {
-    display: flex;
-    justify-content: center;
-    gap: 4px;
+.recipe-card img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
 }
+
+.recipe-card p {
+    margin-top: 8px; /* Added margin for spacing */
+}
+
+/* Media queries */
+@media (min-width: 768px) {
+    /* Apply styles for medium screens and above */
+    .recipes-main-section {
+        padding: 0 50px; /* Adjust padding for medium screens */
+    }
+
+    .recipes-card-container {
+        flex-direction: row;
+    }
+
+    .recipes-card-container .left {
+        margin-top: 80px;
+    }
+
+    .recipes-card-container .right {
+        max-width: 872px;
+    }
+
+    .recipe-filter-panel {
+        justify-content: flex-end;
+    }
+
+    .recipe-card {
+        width: 248px;
+        height: 248px;
+    }
+
+    .recipe-card img {
+        width: 230px;
+        height: 180px;
+    }
+}
+
