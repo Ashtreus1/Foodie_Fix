@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'More Sugar';
+    src: url("../fonts/MoreSugar-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Averia';
+    src: url("../fonts/AveriaSerifLibre-Regular.ttf");
+}
+
+body{
+    background-color: #fffaf0;
+}
+
+/* Event section styles */
+.event-section {
+    padding: 40px 20px;
+    font-family: 'Averia', serif;
+}
+
+.event-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.event-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+    font-family: 'More Sugar', cursive;
+}
+
+.event-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.event-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    width: calc(33.333% - 20px);
+    margin-bottom: 20px;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+}
+
+.event-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.event-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.event-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.event-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.event-date {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.event-link {
+    text-decoration: none;
+    color: #00bcd4;
+    font-weight: bold;
+    transition: color 0.3s;
+    align-self: flex-start;
+}
+
+.event-link:hover {
+    color: #008c9e;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .event-title {
+        font-size: 28px;
+    }
+
+    .event-content {
+        padding: 15px;
+    }
+
+    .event-heading {
+        font-size: 20px;
+    }
+
+    .event-description {
+        font-size: 14px;
+    }
+
+    .event-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .event-title {
+        font-size: 24px;
+    }
+
+    .event-content {
+        padding: 10px;
+    }
+
+    .event-heading {
+        font-size: 18px;
+    }
+
+    .event-description {
+        font-size: 12px;
+    }
+
+    .event-card {
+        width: 100%;
+    }
+}
