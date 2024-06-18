@@ -22,7 +22,7 @@ body {
     padding: 0;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -32,7 +32,7 @@ html{
 .hero {
     min-height: 95vh;
     text-align: left;
-    color: #333;
+    color: black;
     padding: 0 50px;
     display: flex;
     flex-direction: column;
@@ -75,7 +75,7 @@ html{
 }
 
 .hero-button {
-    border: black solid 2px;
+    border: orange solid 2px;
     color: black;
     padding: 8px 15px;
     border-radius: 100px;
@@ -89,8 +89,8 @@ html{
 }
 
 .hero-image img {
-    width: 100%;
-    max-width: 600px;
+    width: 600px;
+    /* max-width: 600px; */
     height: auto;
     animation: float 5s infinite ease-in-out;
 }
@@ -107,10 +107,76 @@ html{
 */
 
 .features {
-    padding: 50px 20px;
-    margin: 0 20px;
-    background-color: transparent;
+    padding: 100px 10%;
+    background-color: #ffffff;
     text-align: center;
+}
+
+.features-header h1{
+    font-size: 38px;
+    padding-bottom: 8px;
+}
+
+.features-header p {
+    width: 500px;
+    margin: auto;
+    color: #4e4e4e;
+    font-size: 18px;
+    padding-bottom: 50px;
+}
+
+.features swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.features swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.features swiper-slide img {
+    display: block;
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.features swiper-slide h1 {
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.features swiper-slide p {
+    margin: auto;
+    color: #4e4e4e;
+    width: 300px;
+    font-size: 12px;
+}
+
+.features swiper-slide button {
+    color: black;
+    width: 300px;
+    height: 50px;
+    background-color: transparent;
+    border: orange solid 2px;
+
+    border-radius: 10px;
+    margin: 10px 0;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+.features swiper-slide button:hover {
+    border-color: black;
+    background-color: orange;
 }
 
 .features h2 {
@@ -119,7 +185,7 @@ html{
     color: #333;
 }
 
-.features-grid {
+/* .features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -180,58 +246,7 @@ html{
 
 .see-more-button:hover {
     background-color: #ff4500;
-}
-
-/* Food Events Section */
-
-.food-events {
-    padding: 50px 20px;
-    margin: 0 auto;
-    max-width: 1200px;
-    background-color: transparent;
-    text-align: center;
-}
-
-.food-events h2 {
-    font-size: 48px;
-    margin-bottom: 40px;
-    color: #333;
-}
-
-.swiper-container {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.swiper-wrapper {
-    display: flex;
-    transition-property: transform;
-    box-sizing: content-box;
-}
-
-.swiper-slide {
-    flex: 0 0 auto;
-    margin-right: 20px;
-    width: 300px;
-}
-
-.swiper-slide img {
-    width: 50%;
-    height: 50%;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.swiper-pagination {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    display: none;
-}
+} */
 
 /* 
   Recent blog styling
@@ -314,7 +329,6 @@ html{
     text-decoration: underline;
 }
 
-
 /*
   Animations and Media Queries Styling  
 */
@@ -329,7 +343,6 @@ html{
 }
 
 @media (max-width: 1024px) {
-
     .hero {
         padding: 0 30px;
     }
@@ -365,7 +378,6 @@ html{
 }
 
 @media (max-width: 768px) {
-
     .hero-content {
         text-align: center;
     }
