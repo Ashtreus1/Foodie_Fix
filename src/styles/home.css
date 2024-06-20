@@ -85,7 +85,7 @@ html {
 }
 
 .hero-button:hover {
-    background-color: #ff4500;
+    background-color: #fcba2c;
 }
 
 .hero-image img {
@@ -112,17 +112,24 @@ html {
     text-align: center;
 }
 
-.features-header h1{
-    font-size: 38px;
-    padding-bottom: 8px;
+.features-header h1 {
+    font-size: 30px !important;
+    padding-bottom: 8px !important;
 }
 
 .features-header p {
-    width: 500px;
+    width: 100%;
+    margin: auto;
+    color: #4e4e4e;
+    font-size: 15px !important;
+    padding-bottom: 50px;
+}
+
+.features-header p {
+    max-width: 500px !important;
     margin: auto;
     color: #4e4e4e;
     font-size: 18px;
-    padding-bottom: 50px;
 }
 
 .features swiper-container {
@@ -172,7 +179,6 @@ html {
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
 }
 .features swiper-slide button:hover {
     border-color: black;
@@ -251,6 +257,171 @@ html {
 /* 
   Recent blog styling
 */
+
+.testimonials {
+    padding: 100px 10% 200px 10%;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.testimonials-header h1 {
+    font-size: 30px;
+}
+
+.testimonials-header p {
+    font-size: 15px;
+    width: 100%;
+    padding-bottom: 50px;
+    color: #4e4e4e;
+    margin: auto;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.testimonials-container > div {
+    width: 350px;
+    /* height: 300px; */
+    padding: 20px;
+    background-color: #fffaf0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.testimonials-container > div .profile {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+    border: 2px solid orange;
+    object-fit: cover;
+}
+
+.testimonials-container > div h1 {
+    font-size: 18px;
+    color: #4e4e4e;
+}
+
+.testimonials-container > div p {
+    font-size: 18px;
+}
+
+/* SHOWCASE */
+.showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 100px 10%;
+    gap: 50px;
+    margin: auto;
+}
+
+.showcase .left {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    gap: 5px;
+    max-width: 70%;
+    margin: auto;
+}
+
+.showcase-item {
+    width: 180px;
+    height: 400px;
+    position: relative;
+    color: white;
+}
+
+.showcase-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.showcase-info {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    /* height: 100%; */
+    bottom: 0;
+    background-color: rgba(4, 4, 4, 0.5);
+    color: white;
+}
+
+.showcase-info h1 {
+    color: orange;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; /* Add this line */
+    font-size: medium;
+}
+
+.showcase-info p {
+    font-size: smaller;
+    display: none;
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+.showcase-info:hover p {
+    display: block;
+    opacity: 1;
+}
+.showcase .right {
+    margin: auto;
+    width: 30%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.showcase .right h1 {
+    font-size: 38px;
+    padding-bottom: 8px;
+    text-align: right;
+}
+
+.showcase .right p {
+    text-align: right;
+}
+
+.showcase .right a {
+    text-decoration: none;
+    color: black;
+    width: 200px;
+    height: 50px;
+    border: orange solid 2px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    margin: 10px 0;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* BLOGS (deprecated) */
 
 .recent-blogs {
     padding: 50px 20px;
@@ -342,7 +513,7 @@ html {
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
     .hero {
         padding: 0 30px;
     }
@@ -439,9 +610,39 @@ html {
     .small-cards {
         width: 100%;
     }
+
+
+    .showcase-item {
+        display: none;
+    }
+
+    .showcase .right {
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    .showcase .right h1 {
+        font-size: 38px;
+        padding-bottom: 8px;
+        text-align: center;
+    }
+
+    .showcase .right p {
+        text-align: center;
+    }
+    .showcase .left {
+        display: none;
+    }
+
+    .testimonials-container {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
     .hero {
         padding: 0 10px;
     }
@@ -459,7 +660,41 @@ html {
         padding: 6px 8px;
     }
 
+    .testimonials-container {
+        display: flex;
+        flex-direction: column;
+    }
+
     .hero-image img {
         max-width: 250px;
     }
+
+    .features-header p {
+        width: 100%;
+    }
+
+    .showcase-item {
+        display: none;
+    }
+
+    .showcase .right {
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    .showcase .right h1 {
+        font-size: 38px;
+        padding-bottom: 8px;
+        text-align: center;
+    }
+
+    .showcase .right p {
+        text-align: center;
+    }
+    .showcase .left {
+        display: none;
+    }
+
 }
